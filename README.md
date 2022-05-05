@@ -1,6 +1,7 @@
 # 6 bit RLE compressed PCM format
 
 This format is RLE compressible 6 bit DPCM, it's encoded to single byte for ease to use.
+
 Each output is expanded to 16 bit signed PCM.
 
 ## Data format (single byte):

@@ -119,7 +119,7 @@ Each output is expanded to 16 bit signed PCM.
 </table>
 
 
-### Update routine
+### Decode routine
 
 	X = (X-1 * D) + (Y * 1 - (Neg * 2))
 	X = -32767 < X < 32767

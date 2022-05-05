@@ -1,5 +1,6 @@
 # 6 bit RLE compressed PCM format
 
+This format is RLE compressible 6 bit DPCM, it's encoded to single byte for ease to use.
 Each output is expanded to 16 bit signed PCM.
 
 ## Data format (single byte):
@@ -23,28 +24,28 @@ Each output is expanded to 16 bit signed PCM.
 		<td>0</td>
 	</tr>
 	<tr>
+		<td>-</td> <td>x</td>
+		<td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+		<td>Delta bit</td>
+	</tr>
+	<tr>
 		<td>0</td>
 		<td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td>
 		<td>Sound output</td>
 	</tr>
 	<tr>
-		<td>0</td> <td>x</td>
-    <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
-		<td>Delta bit</td>
-	</tr>
-	<tr>
 		<td>0</td> <td>-</td> <td>x</td>
-    <td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+		<td>-</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
 		<td>Negative bit</td>
 	</tr>
 	<tr>
 		<td>0</td> <td>-</td> <td>-</td>
-    <td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td>
+		<td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td>
 		<td>Output bit</td>
 	</tr>
 	<tr>
 		<td>1</td>
-		<td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td>
+		<td>-</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td> <td>x</td>
 		<td>Repeat previous output update x - 1 time (RLE)</td>
 	</tr>
 </table>
